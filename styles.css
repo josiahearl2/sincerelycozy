@@ -1,0 +1,398 @@
+:root {
+  --bg: #fff8f2;
+  --bg-soft: #f9efe6;
+  --peach: #f4cdb7;
+  --tan: #e7bfa8;
+  --text: #3d2d24;
+  --text-soft: #6e5649;
+  --white: #ffffff;
+  --shadow: 0 16px 40px rgba(85, 56, 40, 0.12);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 8% 10%, rgba(244, 205, 183, 0.5), transparent 30%),
+    radial-gradient(circle at 90% 14%, rgba(231, 191, 168, 0.25), transparent 25%),
+    var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.site-header,
+main,
+.site-footer,
+.copyright {
+  width: min(1120px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand img:first-child {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.brand img:last-child {
+  height: 26px;
+  width: auto;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.2rem;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--white);
+  padding: 0.75rem 1.3rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1.5px solid var(--text);
+  color: var(--text);
+}
+
+.btn-amazon {
+  background: linear-gradient(120deg, #34251d, #5f4032);
+}
+
+.btn-small {
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+}
+
+.hero {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-content h1,
+h2,
+h3,
+h4 {
+  font-family: "Fraunces", serif;
+  line-height: 1.1;
+}
+
+.hero-content h1 {
+  margin: 0.2rem 0 0.8rem;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+}
+
+.hero-content p {
+  color: var(--text-soft);
+  max-width: 38ch;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #9a7058;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.hero-media img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.split-section,
+.about {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.split-image img,
+.about-image img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.split-content h2,
+.section-head h2,
+.about-content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  margin: 0.2rem 0 0.8rem;
+}
+
+.split-content p,
+.about-content p {
+  color: var(--text-soft);
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+.icon-grid span {
+  padding: 0.65rem 0.8rem;
+  border-radius: 12px;
+  background: var(--bg-soft);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.shop,
+.reviews,
+.video,
+.banner-grid {
+  margin-top: 5rem;
+}
+
+.section-head h2 {
+  margin-top: 0.25rem;
+}
+
+.product-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 0.85rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.7rem;
+}
+
+.product-card img {
+  border-radius: 12px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 0;
+  font-size: 1.18rem;
+}
+
+.gallery {
+  margin-top: 4.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.gallery img {
+  border-radius: 16px;
+  min-height: 190px;
+  object-fit: cover;
+}
+
+.review-grid {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.review-grid blockquote {
+  margin: 0;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.2rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+.video-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.video-grid video {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #000;
+}
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.banner-card {
+  min-height: 340px;
+  border-radius: var(--radius);
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  display: flex;
+  align-items: end;
+}
+
+.banner-card > div {
+  background: rgba(36, 23, 15, 0.6);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 14px;
+}
+
+.banner-card h3 {
+  margin-top: 0;
+}
+
+.banner-card a {
+  color: #ffe8d2;
+  font-weight: 700;
+}
+
+.site-footer {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid rgba(85, 56, 40, 0.2);
+  padding-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.site-footer h4 {
+  margin: 0 0 0.8rem;
+}
+
+.site-footer a,
+.site-footer p {
+  display: block;
+  margin: 0 0 0.5rem;
+  color: var(--text-soft);
+}
+
+.copyright {
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  text-align: center;
+  margin: 0 auto 1.5rem;
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .split-section,
+  .about,
+  .product-grid,
+  .gallery,
+  .review-grid,
+  .video-grid,
+  .banner-grid,
+  .site-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-header {
+    flex-wrap: wrap;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero,
+  .split-section,
+  .about,
+  .product-grid,
+  .gallery,
+  .review-grid,
+  .video-grid,
+  .banner-grid,
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header,
+  main,
+  .site-footer,
+  .copyright {
+    width: min(1120px, calc(100% - 1.4rem));
+  }
+
+  .brand img:last-child {
+    height: 21px;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+    overflow: auto;
+    white-space: nowrap;
+    padding-bottom: 0.4rem;
+  }
+}
